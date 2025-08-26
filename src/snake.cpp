@@ -1,6 +1,6 @@
 #include "Snake.h"
 #include "Pos.h"
-
+#include "Autosnake.h"
 // 蛇初始位置：中间3节身体，方向向上
 Snake::Snake() {
     body.push_back(Pos(10, 7));   // 蛇头（假设WIDTH=20, HEIGHT=15，中间位置）
@@ -30,7 +30,7 @@ void Snake::changeDir(int newDir) {
 }
 
 // 移动蛇：返回是否碰撞（撞墙或自身）
-bool Snake::move() {
+bool Snake::move(const std::vector<Pos>& autoSnakeBody) {
     Pos head = body.front();  // 当前蛇头位置
 
     // 计算新蛇头位置
@@ -48,6 +48,12 @@ bool Snake::move() {
 
     // 撞自身检测
     for (const auto& p : body) {
+        if (head.x == p.x && head.y == p.y) {
+            return true;
+        }
+    }
+    //撞自动蛇检测
+    for (const auto& p : autoSnakeBody) {
         if (head.x == p.x && head.y == p.y) {
             return true;
         }

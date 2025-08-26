@@ -201,6 +201,30 @@ src/Pos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eat-snake.dir/build.make CMakeFiles/eat-snake.dir/src/Pos.cpp.s
 .PHONY : src/Pos.cpp.s
 
+src/autosnake.o: src/autosnake.cpp.o
+.PHONY : src/autosnake.o
+
+# target to build an object file
+src/autosnake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eat-snake.dir/build.make CMakeFiles/eat-snake.dir/src/autosnake.cpp.o
+.PHONY : src/autosnake.cpp.o
+
+src/autosnake.i: src/autosnake.cpp.i
+.PHONY : src/autosnake.i
+
+# target to preprocess a source file
+src/autosnake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eat-snake.dir/build.make CMakeFiles/eat-snake.dir/src/autosnake.cpp.i
+.PHONY : src/autosnake.cpp.i
+
+src/autosnake.s: src/autosnake.cpp.s
+.PHONY : src/autosnake.s
+
+# target to generate assembly for a file
+src/autosnake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eat-snake.dir/build.make CMakeFiles/eat-snake.dir/src/autosnake.cpp.s
+.PHONY : src/autosnake.cpp.s
+
 src/food.o: src/food.cpp.o
 .PHONY : src/food.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... src/Pos.o"
 	@echo "... src/Pos.i"
 	@echo "... src/Pos.s"
+	@echo "... src/autosnake.o"
+	@echo "... src/autosnake.i"
+	@echo "... src/autosnake.s"
 	@echo "... src/food.o"
 	@echo "... src/food.i"
 	@echo "... src/food.s"

@@ -48,4 +48,5 @@ CMakeFiles/eat-snake.dir/main.cpp.o: \
  /usr/include/c++/13/backward/binders.h \
  /usr/include/c++/13/bits/range_access.h \
  /usr/include/c++/13/bits/vector.tcc \
+ /mnt/c/Users/59903/eat-snake/include/Autosnake.h \
  /mnt/c/Users/59903/eat-snake/include/Food.h

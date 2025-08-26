@@ -15,7 +15,7 @@ public:
     Pos getHead() const;                // 获取蛇头位置
     const std::vector<Pos>& getBody() const;  // 获取蛇身
     void changeDir(int newDir);         // 改变移动方向（禁止反向）
-    bool move();                        // 移动蛇（返回是否碰撞）
+    bool move(const std::vector<Pos>& autoSnakeBody);                        // 移动蛇（返回是否碰撞）
     void grow();                        // 蛇生长（吃到食物时）
     // 添加：获取蛇的长度（包含头部）
     int getLength() const {

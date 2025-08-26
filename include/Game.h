@@ -2,11 +2,13 @@
 #define GAME_H
 
 #include "Snake.h"
+#include "Autosnake.h"
 #include "Food.h"
 
 class Game {
 private:
     Snake snake;
+    AutoSnake autoSnake;
     Food food;
     int score;
     bool running;

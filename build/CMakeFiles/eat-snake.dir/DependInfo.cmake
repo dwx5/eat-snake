@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/59903/eat-snake/main.cpp" "CMakeFiles/eat-snake.dir/main.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/main.cpp.o.d"
   "/mnt/c/Users/59903/eat-snake/src/Game.cpp" "CMakeFiles/eat-snake.dir/src/Game.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/src/Game.cpp.o.d"
   "/mnt/c/Users/59903/eat-snake/src/Pos.cpp" "CMakeFiles/eat-snake.dir/src/Pos.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/src/Pos.cpp.o.d"
+  "/mnt/c/Users/59903/eat-snake/src/autosnake.cpp" "CMakeFiles/eat-snake.dir/src/autosnake.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/src/autosnake.cpp.o.d"
   "/mnt/c/Users/59903/eat-snake/src/food.cpp" "CMakeFiles/eat-snake.dir/src/food.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/src/food.cpp.o.d"
   "/mnt/c/Users/59903/eat-snake/src/snake.cpp" "CMakeFiles/eat-snake.dir/src/snake.cpp.o" "gcc" "CMakeFiles/eat-snake.dir/src/snake.cpp.o.d"
   )

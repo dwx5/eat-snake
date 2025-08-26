@@ -15,7 +15,7 @@
 #define ANSI_CYAN "\033[36m"
 
 // 游戏初始化
-Game::Game() : snake(), food(3), score(0), running(true), paused(false) {
+Game::Game() : snake(), autoSnake(),food(3), score(0), running(true), paused(false) {
     srand(time(0));
     hideCursor();
     snake.changeDir(4);  // 初始向右自动移动
@@ -77,7 +77,12 @@ void Game::draw() {
         for (int x = 0; x < 20; x++) {
             if (x == 0 || x == 19) {  // 左右边框
                 std::cout << ANSI_WHITE << "│";
-            } else if (x == snake.getHead().x && y == snake.getHead().y) {  // 蛇头
+            } 
+            // 检查自动蛇头（蓝色）
+            else if (x == autoSnake.getHead().x && y == autoSnake.getHead().y) {
+                std::cout << ANSI_CYAN << "■";
+            }
+            else if (x == snake.getHead().x && y == snake.getHead().y) {  // 蛇头
                 std::cout << ANSI_YELLOW << "■";
             } else {
                 bool isBody = false;
@@ -88,6 +93,15 @@ void Game::draw() {
                         isBody = true;
                         break;
                     }
+                }
+                if (!isBody) {
+                    for (const auto& p : autoSnake.getBody()) {
+                    if (x == p.x && y == p.y) {
+                        std::cout << "\033[36m" << "□"; // 浅蓝色方块
+                        isBody = true;
+                        break;
+                    }
+                }
                 }
                 if (!isBody) {
                     // 检测食物
@@ -146,6 +160,8 @@ void Game::handleInput() {
             running = false;
         }
     }
+    autoSnake.updateAI(food.getAllPos(), snake.getBody());
+
 }
 
 // 更新游戏逻辑
@@ -153,15 +169,21 @@ void Game::update() {
     if (paused) return;
 
     // 蛇移动并检测碰撞
-    if (snake.move()) {
+    if (snake.move(autoSnake.getBody())) {
+        running = false;
+        return;
+    }
+    if (autoSnake.move(snake.getBody())) {
         running = false;
         return;
     }
 
     // 检测吃食物
     Pos snakeHead = snake.getHead();
+    Pos autoSnakeHead = autoSnake.getHead();
     const std::vector<Pos>& allFoodPos = food.getAllPos();
     bool ateFood = false;
+    bool atefood = false;
 
     for (const auto& fp : allFoodPos) {
         if (snakeHead == fp) {
@@ -170,6 +192,15 @@ void Game::update() {
             food.remove(fp);
             food.regenerateMultiple(5, snake.getBody());
             ateFood = true;
+            break;
+        }
+    }
+    for (const auto& fp : allFoodPos) {
+        if (autoSnakeHead == fp) {
+            autoSnake.grow();
+            food.remove(fp);
+            food.regenerateMultiple(5, snake.getBody());
+            atefood = true;
             break;
         }
     }

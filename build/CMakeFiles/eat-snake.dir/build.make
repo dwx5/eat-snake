@@ -111,10 +111,24 @@ CMakeFiles/eat-snake.dir/src/Pos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eat-snake.dir/src/Pos.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/59903/eat-snake/src/Pos.cpp -o CMakeFiles/eat-snake.dir/src/Pos.cpp.s
 
+CMakeFiles/eat-snake.dir/src/autosnake.cpp.o: CMakeFiles/eat-snake.dir/flags.make
+CMakeFiles/eat-snake.dir/src/autosnake.cpp.o: /mnt/c/Users/59903/eat-snake/src/autosnake.cpp
+CMakeFiles/eat-snake.dir/src/autosnake.cpp.o: CMakeFiles/eat-snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/eat-snake.dir/src/autosnake.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eat-snake.dir/src/autosnake.cpp.o -MF CMakeFiles/eat-snake.dir/src/autosnake.cpp.o.d -o CMakeFiles/eat-snake.dir/src/autosnake.cpp.o -c /mnt/c/Users/59903/eat-snake/src/autosnake.cpp
+
+CMakeFiles/eat-snake.dir/src/autosnake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eat-snake.dir/src/autosnake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/59903/eat-snake/src/autosnake.cpp > CMakeFiles/eat-snake.dir/src/autosnake.cpp.i
+
+CMakeFiles/eat-snake.dir/src/autosnake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eat-snake.dir/src/autosnake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/59903/eat-snake/src/autosnake.cpp -o CMakeFiles/eat-snake.dir/src/autosnake.cpp.s
+
 CMakeFiles/eat-snake.dir/src/food.cpp.o: CMakeFiles/eat-snake.dir/flags.make
 CMakeFiles/eat-snake.dir/src/food.cpp.o: /mnt/c/Users/59903/eat-snake/src/food.cpp
 CMakeFiles/eat-snake.dir/src/food.cpp.o: CMakeFiles/eat-snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/eat-snake.dir/src/food.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/eat-snake.dir/src/food.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eat-snake.dir/src/food.cpp.o -MF CMakeFiles/eat-snake.dir/src/food.cpp.o.d -o CMakeFiles/eat-snake.dir/src/food.cpp.o -c /mnt/c/Users/59903/eat-snake/src/food.cpp
 
 CMakeFiles/eat-snake.dir/src/food.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/eat-snake.dir/src/food.cpp.s: cmake_force
 CMakeFiles/eat-snake.dir/src/snake.cpp.o: CMakeFiles/eat-snake.dir/flags.make
 CMakeFiles/eat-snake.dir/src/snake.cpp.o: /mnt/c/Users/59903/eat-snake/src/snake.cpp
 CMakeFiles/eat-snake.dir/src/snake.cpp.o: CMakeFiles/eat-snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/eat-snake.dir/src/snake.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/eat-snake.dir/src/snake.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eat-snake.dir/src/snake.cpp.o -MF CMakeFiles/eat-snake.dir/src/snake.cpp.o.d -o CMakeFiles/eat-snake.dir/src/snake.cpp.o -c /mnt/c/Users/59903/eat-snake/src/snake.cpp
 
 CMakeFiles/eat-snake.dir/src/snake.cpp.i: cmake_force
@@ -144,6 +158,7 @@ eat__snake_OBJECTS = \
 "CMakeFiles/eat-snake.dir/main.cpp.o" \
 "CMakeFiles/eat-snake.dir/src/Game.cpp.o" \
 "CMakeFiles/eat-snake.dir/src/Pos.cpp.o" \
+"CMakeFiles/eat-snake.dir/src/autosnake.cpp.o" \
 "CMakeFiles/eat-snake.dir/src/food.cpp.o" \
 "CMakeFiles/eat-snake.dir/src/snake.cpp.o"
 
@@ -153,11 +168,12 @@ eat__snake_EXTERNAL_OBJECTS =
 eat-snake: CMakeFiles/eat-snake.dir/main.cpp.o
 eat-snake: CMakeFiles/eat-snake.dir/src/Game.cpp.o
 eat-snake: CMakeFiles/eat-snake.dir/src/Pos.cpp.o
+eat-snake: CMakeFiles/eat-snake.dir/src/autosnake.cpp.o
 eat-snake: CMakeFiles/eat-snake.dir/src/food.cpp.o
 eat-snake: CMakeFiles/eat-snake.dir/src/snake.cpp.o
 eat-snake: CMakeFiles/eat-snake.dir/build.make
 eat-snake: CMakeFiles/eat-snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable eat-snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/59903/eat-snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable eat-snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eat-snake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
