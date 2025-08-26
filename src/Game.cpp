@@ -168,7 +168,7 @@ void Game::update() {
             score += 10;
             snake.grow();
             food.remove(fp);
-            food.regenerateMultiple(1, snake.getBody());
+            food.regenerateMultiple(5, snake.getBody());
             ateFood = true;
             break;
         }

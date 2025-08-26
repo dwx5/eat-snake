@@ -10,7 +10,7 @@ private:
 
 public:
     // 构造函数：初始生成指定数量的食物
-    Food(int initialCount = 3);  // 默认生成3个食物
+    Food(int initialCount = 5);  // 默认生成3个食物
 
     // 获取所有食物的位置
     const std::vector<Pos>& getAllPos() const;

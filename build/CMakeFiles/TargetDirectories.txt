@@ -1,0 +1,3 @@
+/mnt/c/Users/59903/eat-snake/build/CMakeFiles/eat-snake.dir
+/mnt/c/Users/59903/eat-snake/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/59903/eat-snake/build/CMakeFiles/rebuild_cache.dir
